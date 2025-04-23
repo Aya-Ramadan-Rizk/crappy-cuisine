@@ -1,0 +1,937 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    text-transform: capitalize;
+    font-weight: bold;
+    cursor: default;
+}
+body{
+    perspective: 600px;
+    background: -webkit-linear-gradient(bottom,#0a001a,#1b0033,#2c003e);
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.title{
+    width: fit-content;
+    margin: auto;
+    padding: 30px 0 20px 0;
+    font-size: 30px;
+    color: #00ffff;
+    text-shadow: 2px 2px 6px #00000080;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.line{
+    width: 130px;
+    height: 3px;
+    background-color: antiquewhite;
+    border-radius: 35%;
+    margin: auto auto 40px auto;
+    transition-duration: 1s;
+    background: -webkit-linear-gradient(right,#ff00ff,#00ffff);
+    cursor: pointer;
+}
+.line:hover{
+    transform: scale(1.5,1);
+}
+/* -------------------------------------------------------- {header -------------------------------------------------------- */
+header{
+    width: 100%;
+    height: 90px;
+    background-color: #2c003e;
+    display: flex;
+    margin-top: 20px;
+    background: -webkit-linear-gradient(bottom right, #0f0c29 ,#302b63,#24243e);
+    box-shadow: 0 0 12px #8a2be2;
+    box-shadow: 0 0 10px #8a2be2;
+    border: 1px solid #8a2be2;
+    border-radius: 20px;
+    padding: 3px;
+}
+/* -------------- {header-img -------------- */
+.header-img img{
+    width: 180px;
+    height: 100%;
+    margin-left: 30px;
+}
+/* -------------- header-img} -------------- */
+/* -------------- {header-links -------------- */
+header .header-links{
+    margin: auto 30px auto auto;
+}
+.header-links ul{
+    display: flex;
+    list-style-type: none;
+}
+header .header-links ul li{
+    position: relative;
+}
+.header-links ul li a{
+    text-decoration: none;
+    padding: 10px;
+    height: 48px;
+    margin: auto 5px;
+    display: flex;
+    font-size: 18px;
+    color: #ffffff;
+}
+/* ------------------------------------------- {animation ------------------------------------------- */
+/* ---------------- {after-before ---------------- */
+.header-links ul li a::after{
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #39ff14;
+    transition-duration: 0.25s;
+    transition-delay: .25s;
+}
+.header-links ul li a:hover::after{
+    width: 103%;
+    height: 1px;
+}
+.header-links ul li a::before{
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #39ff14;
+    transition-duration: 0.3s;
+    transition-delay: .3s;
+}
+.header-links ul li a:hover::before{
+    width: 103%;
+    height: 1px;
+}
+/* ---------------- after-before} ---------------- */
+/* -------------------------------- {header-parent-animation -------------------------------- */
+.header-links ul li a{
+    position: relative;
+}
+.header-links ul li a .header-parent-animation{
+    position: absolute;
+    width: 2px;
+    height: 3px;
+    background-color: #39ff14;
+    top: 21px;
+    visibility: hidden;
+    transition-duration: .3s;
+}
+/* ---------------- {header-parent-animation-1(left) ---------------- */
+.header-parent-animation-1{
+    left: 0;
+}
+.header-links ul li a:hover .header-parent-animation-1{
+    transform: scale(1,14.5);
+    visibility: visible;
+}
+/* ---------------- header-parent-animation-1(left)} ---------------- */
+/* ---------------- {header-parent-animation-2(right) ---------------- */
+.header-parent-animation-2{
+    left: 100%;
+}
+.header-links ul li a:hover .header-parent-animation-2{
+    transform: scale(1,14.5);
+    visibility: visible;
+}
+/* ---------------- header-parent-animation-2(right)} ---------------- */
+/* -------------------------------- header-parent-animation} -------------------------------- */
+/* ------------------------------------------- animation} ------------------------------------------- */
+/* -------------- {table -------------- */
+.header-link-1{
+    position: relative;
+}
+.header-table-parent{
+    display: flex;
+    line-height: 30px;
+    border: 2px solid #8a2be2;
+    width: 440px;
+    position: absolute;
+    top: 65px;
+    left: 0px;
+    transform: scale(0,0);
+    transition-duration: .75s;
+    visibility: hidden;
+    background: -webkit-linear-gradient(#1b0033,#2c003e) ;
+    border-radius: 20px;
+    box-shadow: 0 0 8px 8px #5a2d82;
+    padding: 20px;
+}
+.header-table{
+    padding: 10px;
+}
+.header-table-all{
+    border-bottom: 2px solid #ff00ff;
+    width: fit-content;
+    color: #39ff14;
+    text-shadow: 2px 2px 4px #93ff14;
+}
+.header-link-1:hover .header-table-parent{
+    transform: scale(1,1);
+    visibility: visible;
+}
+.header-table-2 ,.header-table-5{
+    color: #39ff14;
+}
+.header-table-1 ,.header-table-4{
+    color: #ff00ff;
+}
+.header-table-3,.header-table-6{
+    color: #00ffff;
+}
+/* -------------- table} -------------- */
+/* -------------- header-links} -------------- */
+/* -------------- {header-icon -------------- */
+.header-icon{
+    padding: 10px;
+    position: relative;
+    margin-right: 50px;
+}
+.header-icon i{
+    padding: 5px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+/* -------------- {header-icon-1 -------------- */
+.header-icon-1{
+    color: #ffffff;
+    box-shadow: 0 0 20px #ff007f;
+    border: 2px solid #ff007f;
+    border-radius: 12px;
+}
+.header-icon .header-icon-1:hover{
+    transform: scale(1.2);
+    color: #f2f2f2;
+    box-shadow: 0 0 30px #ff007f;
+}
+/* -------------- header-icon-1} -------------- */
+/* -------------- {header-icon-2 -------------- */
+.header-icon-2{
+    background: -webkit-linear-gradient(bottom,#7f7f7f,#b0b0b0);
+    width: fit-content;
+    background-clip: text;
+    color: transparent;
+    box-shadow: 0 0 30px #ffcc00;
+    border: 2px solid #ffcc00;
+    border-radius: 12px;
+}
+.header-icon .header-icon-2:hover{
+    transform: scale(1.2);
+    background: -webkit-linear-gradient(bottom,#b0b0b0,#7f7f7f);
+    width: fit-content;
+    background-clip: text;
+    color: transparent;
+    box-shadow: 0 0 40px #ffcc00;
+}
+/* -------------- header-icon-2} -------------- */
+/* -------------- {header-icon-3 -------------- */
+.header-icon-3{
+    background: -webkit-linear-gradient(right,#f3ff00,#ff007f);
+    width: fit-content;
+    background-clip: text;
+    color: transparent;
+    box-shadow: 0 0 40px #39ff14;
+    border: 2px solid #39ff14;
+    border-radius: 12px;
+}
+.header-icon .header-icon-3:hover{
+    transform: scale(1.2);
+    background: -webkit-linear-gradient(right,#ff007f,#f3ff00);
+    width: fit-content;
+    background-clip: text;
+    color: transparent;
+    box-shadow: 0 0 25px #ff00ff;
+    box-shadow: 0 0 50px #39ff14;
+}
+/* -------------- header-icon-3} -------------- */
+/* -------------- {header-icon-number -------------- */
+.header-icon-number{
+    position: absolute;
+    left: 130px;
+    top: 50px;
+    font-size: 15px;
+    background: -webkit-linear-gradient(right,#00ffcc,#ff007f);
+    box-shadow: 0 0 15px #ff00ff;
+    width: 15px;
+    height: 20px;
+    border-radius: 0 20px 20px;
+    text-align: center;
+    padding-top: 3.25px;
+    color: #ffffff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+.header-icon i:hover .header-icon-number{
+    transform: scale(1.2);
+    color: #f3ff00;
+    background: -webkit-linear-gradient(left,#ff007f,#00ffcc);
+    box-shadow: 0 0 25px #ff00ff;
+    left: 30px;
+    top: 37px;
+}
+/* -------------- header-icon-number} -------------- */
+/* -------------- header-icon} -------------- */
+.header-span{
+    padding: 5px;
+    font-size: 20px;
+    margin-left: 30px;
+    cursor: default;
+    background: -webkit-linear-gradient(right,#ff00ff,#00ffff);
+    width: fit-content;
+    background-clip: text;
+    color: transparent;
+    box-shadow: 0 0 6px #8a2be2;
+}
+/* -------------------------------------------------------- header} -------------------------------------------------------- */
+/* -------------------------------------------------------- {main -------------------------------------------------------- */
+main{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    margin-top: 30px;
+    background: -webkit-linear-gradient(bottom,#2c003e,#1b0033);
+    box-shadow: 0 0 20px #000 inset;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid #8a2be2;
+}
+main:hover{
+    background: -webkit-linear-gradient(bottom,#1b0033,#5a2d82);
+}
+/* ------------ {main-content(left) ------------ */
+.main-content{
+    width: 50%;
+    height: 100%;
+    line-height: 70px;
+    padding: 12.5% 10%;
+}
+/* ------------ {main-title ------------ */
+.main-title{
+    font-size: 50px;
+    cursor: default;
+}
+.main-title-1{
+    color: #39ff14;
+    text-shadow: 2px 2px 5px #0000004d;
+    border-bottom: 3px solid #ff00ff;
+    box-shadow: 0px 4px 10px #00000033;
+    text-align: center;
+}
+.main-title-2{
+    color: #ff00ff;
+    text-shadow: 2px 2px 6px #00000033;
+    border-bottom: 2px solid #39ff14;
+    box-shadow: 0px 2px 8px #0000004d;
+    text-align: center;
+}
+/* ------------ main-title} ------------ */
+/* ------------ {main-btn ------------ */
+.main-btn .main-icon{
+    margin-right: 5px;
+    font-size: 25px;
+}
+.main-btn{
+    width: 200px;
+    height: 50px;
+    background: -webkit-linear-gradient(right,#ff00ff,#00ffff);
+    box-shadow: 0 0 20px #00ffff;
+    border: 2px solid #00ffff;
+    text-shadow: 1px 1px 2px #000000d4;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+.main-btn:hover{
+    box-shadow: 0 0 30px #39ff14;
+    border: 2px solid #39ff14;
+    background: -webkit-linear-gradient(right,#f3ff00,#39ff14);
+}
+/* ------------ main-btn} ------------ */
+/* ------------ main-content(left)} ------------ */
+/* ------------ {main-img(right) ------------ */
+.main-img{
+    width: 50%;
+    height: 100%;
+}
+.main-img img{
+    width: 100%;
+    height: 100%;
+    margin-top: -20px;
+    margin: -20px 100px auto -120px;
+}
+/* ------------ main-img(right)} ------------ */
+/* -------------------------------------------------------- main} -------------------------------------------------------- */
+/* -------------------------------------------------------- {section-1 -------------------------------------------------------- */
+.section-1-parent{
+    display: flex;
+    background: -webkit-linear-gradient(right,#1b0033,#2c003e);
+    box-shadow: 0 0 20px #000 inset;
+    border-radius: 16px;
+    padding: 20px;
+}
+/* -------------- section-1-cild} -------------- */
+.section-1-cild{
+    width: 24.25%;
+    background: -webkit-linear-gradient(right, #1b0033,#2c003e);
+    background-color: #ffffff0a;
+    border: 1px solid #8a2be2;
+    box-shadow: 0 0 10px #8a2be2;
+    border-radius: 16px;
+    padding: 20px;
+}
+.section-1-cild-1 ,.section-1-cild-2 ,.section-1-cild-3{
+    margin-right: 1%;
+}
+/* -------------- {section-1-cild -------------- */
+/* -------------- {section-1-img -------------- */
+.section-1-img img{
+    width: 100%;
+    height: 250px;
+    border-radius: 16px;
+    border: 1px solid #8a2be2;
+    box-shadow: 0 0 10px #8a2be2;
+    border-radius: 16px;
+}
+/* -------------- section-1-img} -------------- */
+/* ---------------------------- {section-1-content ---------------------------- */
+.section-1-content{
+    padding-left: 10px;
+}
+/* -------------- {section-1-content-1 -------------- */
+.section-1-content-1{
+    line-height: 30px;
+}
+.section-1-content-1 p{
+    font-size: 19px;
+    color: #00ffff;
+    text-shadow: 1px 1px 4px #2c003e;
+    transition-duration: .3s;
+}
+.section-1-cild:hover .section-1-content-1 p{
+    color: #ff69b4;
+}
+/* -------------- section-1-content-1} -------------- */
+/* -------------- {section-1-content-2 -------------- */
+.section-1-content-2{
+    display: flex;
+}
+/* -------------- {section-1-content-2(title) -------------- */
+.section-1-content-2 h4{
+    font-size: 22px;
+    color: #ff00ff;
+    text-shadow: 1px 1px 5px #8a2be2;
+    transition-duration: 0.3s;
+}
+.section-1-cild:hover .section-1-content-2 h4{
+    color: #39ff14;
+    transform: scale(1.05);
+}
+/* -------------- section-1-content-2(title)} -------------- */
+/* -------------- {section-1-content-2(icon) -------------- */
+.section-1-content-2 i{
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    margin-left: auto;
+    color: #ffd700;
+    box-shadow: 0 0 10px #ff00ff;
+    transition-duration: .3s;
+    opacity: 0;
+}
+.section-1-cild:hover .siction-1-icon{
+    transform: scale(1.1) rotate(20deg);
+    opacity: 1;
+}
+/* -------------- section-1-content-2(icon)} -------------- */
+/* -------------- section-1-content-2} -------------- */
+/* ---------------------------- section-1-content} ---------------------------- */
+/* -------------------------------------------------------- section-1} -------------------------------------------------------- */
+/* -------------------------------------------------------- {section-2 -------------------------------------------------------- */
+.section-2{
+    padding-top: 30px;
+}
+/* ------------------------------------------ {section-2-parent-1(top) ------------------------------------------ */
+.section-2-parent-1{
+    display: flex;
+    background: -webkit-linear-gradient(right,#1b0033,#2c003e);
+    box-shadow: 0 0 20px #000 inset;
+    border-radius: 16px;
+    padding: 20px;
+}
+/* ---------------------------- {section-2-parent-1-cild-1(left-top) ---------------------------- */
+.section-2-parent-1-cild-1{
+    width: 49%;
+    height: 300px;
+    padding: 20px;
+    background: #ffffff0d;
+    border-radius: 16px;
+    border: 1px solid #8a2be2;
+    box-shadow: 0 0 10px #8a2be2;
+}
+/* -------------- {section-2-content -------------- */
+/* -------------- {section-2-icon -------------- */
+.section-2-title span i{
+    color: #ff1493;
+    transition-duration: .3s;
+    font-size: 21px;
+    margin-right: 10px;
+}
+.section-2-parent-1-cild-1:hover .section-2-title span i{
+    transform: scale(1.2) rotate(10deg);
+}
+/* -------------- section-2-icon} -------------- */
+/* -------------- {section-2-title -------------- */
+.section-2-title{
+    color: #39ff14;
+    text-shadow: 1px 1px 4px #000;
+    font-size: 25px;
+}
+/* -------------- section-2-title} -------------- */
+/* -------------- {section-2-all-p -------------- */
+.section-2-all-p{
+    font-style: italic;
+    font-size: 20px;
+    padding: 10px 0;
+}
+.section-2-all-p-span-1,.section-2-all-p-span-3{
+    color: #00ffff;
+}
+.section-2-all-p-span-2{
+    color: #ff00ff;
+}
+/* -------------- section-2-all-p} -------------- */
+/* -------------- {section-2-p-long -------------- */
+.section-2-p-long{
+    color: #ffffff;
+    text-shadow: 1px 1px 3px #2c003e;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: justify;
+}
+/* -------------- section-2-p-long} -------------- */
+/* -------------- section-2-content} -------------- */
+/* -------------- {section-2-all-line -------------- */
+.section-2-all-line{
+    width: 100%;
+    height: 10%;
+    margin-top: 20px;
+    display: flex;
+    padding: 20px;
+}
+.section-2-line{
+    width: 40px;
+    height: 4px;
+    border-radius: 30px;
+    background: -webkit-linear-gradient(right,#ff00ff,#00ffff);
+    box-shadow: 0 0 6px #8a2be2;
+    margin-right: 20px;
+}
+/* -------------- section-2-all-line} -------------- */
+/* ---------------------------- section-2-parent-1-cild-1(left-top)} ---------------------------- */
+/* ---------------------------- {section-2-parent-1-cild-2(right-top) ---------------------------- */
+.section-2-parent-1-cild-2{
+    width: 49%;
+    height: 300px;
+    display: flex;
+    background-color: #ffffff0a;
+    border: 1px solid #8a2be2;
+    box-shadow: 0 0 10px #8a2be2;
+    border-radius: 16px;
+    padding: 20px;
+    margin-left: 2%;
+}
+/* -------------- {section-2-parent-1-cild-2(child) -------------- */
+.section-2-parent-1-cild-2-1 ,.section-2-parent-1-cild-2-2{
+    width: 47%;
+    background-color: aquamarine;
+    height: 100%;
+    margin: auto 2%;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #ff00ff;
+    transition-duration: .3s;
+    padding: 10px;
+}
+.section-2-parent-1-cild-2-1{
+    background: url(../images/صوره\ لمشروب\ المرحاض-7.jpg) center /cover;
+}
+.section-2-parent-1-cild-2-2{
+    background: url(../images/صوره\ لطعام\ المرحاض-4.jpg) center /cover;
+}
+.section-2-parent-1-cild-2-1:hover ,.section-2-parent-1-cild-2-2:hover{
+    transform: scale(1.05);
+}
+/* -------------- {section-2-parent-1-cild-2-2(p) -------------- */
+.section-2-parent-1-cild-2-1 p ,.section-2-parent-1-cild-2-2 p{
+    color: #ffd700;
+    text-shadow: 1px 1px 3px #000;
+}
+/* -------------- section-2-parent-1-cild-2-2(p)} -------------- */
+/* -------------- {section-2-parent-1-cild-2-2(title) -------------- */
+.section-2-title-1 ,.section-2-title-2{
+    color: #00ffff;
+    text-shadow: 1px 1px 5px #2c003e;
+    font-size: 20px;
+}
+.section-2-parent-1-cild-2-1:hover .section-2-title-1 ,.section-2-parent-1-cild-2-2:hover .section-2-title-2{
+    color: #ff00ff;
+    text-shadow: 2px 2px 2px #2c003e;
+    transform: scale(1.05);
+}
+/* -------------- section-2-parent-1-cild-2-2(title)} -------------- */
+/* -------------- section-2-parent-1-cild-2(child)} -------------- */
+/* ---------------------------- section-2-parent-1-cild-2(right-top)} ---------------------------- */
+/* ------------------------------------------ section-2-parent-1(top)} ------------------------------------------ */
+/* ------------------------------------------ {section-2-parent-2(bottom) ------------------------------------------ */
+.section-2-parent-2{
+    display: flex;
+    margin: 30px auto;
+    padding: 20px;
+    background: -webkit-linear-gradient(right,#2b0038,#3d0049);
+    box-shadow: 0 0 30px #000000b3;
+    border-radius: 20px;
+}
+/* -------------- {(hr) -------------- */
+.section-2-line-under{
+    border: none;
+    background: -webkit-linear-gradient(right,#f0f , #0ff , #ff0);
+    box-shadow: 0 0 10px #f0f;
+    box-shadow: 0 0 20px #0ff;
+    height: 2px;
+}
+.section-2-line-right{
+    border: none;
+    background: -webkit-linear-gradient(top,#f0f , #0ff , #ff0);
+    box-shadow: 0 0 10px #f0f;
+    box-shadow: 0 0 20px #0ff;
+    width: 2px;
+}
+/* -------------- (hr)} -------------- */
+/* -------------- {section-2-parent-2(child) -------------- */
+.section-2-parent-2-cild-icon{
+    width: 19%;
+    height: 200px;
+    text-align: center;
+    position: relative;
+    background-color: #ffffff1a;
+    background: -webkit-linear-gradient(right,#ff00ff1a,#00ff001a);
+    border: 1px solid #ff00ff;
+    box-shadow: 0 0 15px #ff00ff66;
+    border-radius: 16px;
+    padding: 20px;
+    transition-duration: 0.3;
+    margin: auto .5%;
+}
+.section-2-parent-2-cild-icon:hover{
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0 0 25px #ff00ffcc;
+}
+/* -------------- {section-2-all-icon -------------- */
+.section-2-all-icon{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.section-2-all-child-icon{
+    height: 250px;
+    margin-top: -75px;
+    font-size: 50px;
+}
+/* -------------- section-2-icon} -------------- */
+/* -------------- {section-2-icon-1 -------------- */
+.section-2-icon-1{
+    margin-top: 100px;
+    width: 50px;
+    height: 50px;
+    transition-duration: .3s;
+    color: #00ffff;
+}
+.section-2-parent-2-cild-icon:hover .section-2-icon-1{
+    margin-top: 0;
+}
+/* -------------- section-2-icon-1} -------------- */
+/* -------------- {section-2-icon-2 -------------- */
+.section-2-icon-2{
+    margin-top: 50px;
+    width: 50px;
+    height: 50px;
+    transition-duration: .3s;
+    color: #ffcc00;
+}
+.section-2-parent-2-cild-icon:hover .section-2-icon-2{
+    margin-top: 50px;
+    transform: rotate(10deg) scale(1.2);
+}
+/* -------------- section-2-icon-2} -------------- */
+/* -------------- {section-2-icon -------------- */
+/* -------------- section-2-all-icon} -------------- */
+/* -------------- {section-2-p -------------- */
+.section-2-p{
+    font-size: 17px;
+    font-style: italic;
+    color: #39ff14;
+    text-shadow: 1px 1px 4px #00000066;
+}
+.section-2-parent-2-cild-icon:hover .section-2-p{
+    color: #00ffff;
+    transform: scale(1.05) translateY(-3px);
+    opacity: 0.95;
+}
+/* -------------- section-2-p} -------------- */
+/* -------------- {section-2-title-icon -------------- */
+.section-2-title-icon{
+    font-size: 18px;
+    color: #ff00ff;
+    text-shadow: 1px 1px 3px #00000080;
+}
+.section-2-parent-2-cild-icon:hover .section-2-title-icon{
+    transform: scale(1.05);
+    text-shadow: 1px 1px 3px #000000aa;
+    letter-spacing: 1px;
+}
+/* -------------- section-2-title-icon} -------------- */
+/* -------------- section-2-parent-2(child)} -------------- */
+/* ------------------------------------------ section-2-parent-2(bottom)} ------------------------------------------ */
+/* -------------------------------------------------------- section-2} -------------------------------------------------------- */
+/* -------------------------------------------------------- {section-3 -------------------------------------------------------- */
+/* -------------- {section-3-list -------------- */
+.section-3-list ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+.section-3-list ul li{
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+    text-shadow: 1px 1px 3px black;
+    margin-bottom: 40px;
+}
+/* -------------- {section-3-list(child) -------------- */
+/* -------------- {section-3-list-link-1 -------------- */
+.section-3-list-link-1{
+    color: #ff00ff;
+}
+.section-3-list-link-1:hover{
+    transform: scale(1.2) , rotate(-3deg);
+    text-shadow: 0 0 10px #ff00ff;
+}
+/* -------------- section-3-list-link-1} -------------- */
+/* -------------- {section-3-list-link-2 -------------- */
+.section-3-list-link-2{
+    color: #39ff14;
+}
+.section-3-list-link-2:hover{
+    transform: scale(1.2) , rotate(3deg);
+    text-shadow: 0 0 10px #39ff14;
+}
+/* -------------- section-3-list-link-2} -------------- */
+/* -------------- {section-3-list-link-3 -------------- */
+.section-3-list-link-3{
+    color: #00ffff;
+}
+.section-3-list-link-3:hover{
+    transform: scale(1.2) , rotate(-2deg);
+    text-shadow: 0 0 10px #00ffff;
+}
+/* -------------- section-3-list-link-3} -------------- */
+/* -------------- {section-3-list-link-4 -------------- */
+.section-3-list-link-4{
+    color: #ffff00;
+}
+.section-3-list-link-4:hover{
+    transform: scale(1.2) , rotate(2deg);
+    text-shadow: 0 0 10px #ffff00;
+}
+/* -------------- section-3-list-link-4} -------------- */
+/* -------------- section-3-list(child)} -------------- */
+/* -------------- section-3-list} -------------- */
+/* -------------- {section-3-parent-all -------------- */
+.section-3-parent-all{
+    background: -webkit-linear-gradient(right,#1b0033,#2c003e);
+    box-shadow: 0 0 20px #000 inset;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+/* -------------- {section-3-parent(top-bottom)[parent] -------------- */
+.section-3-parent-1,.section-3-parent-2{
+    display: flex;
+    background: -webkit-linear-gradient(right,#1b0033,#2c003e);
+    padding: 0 40px;
+}
+/* -------------- section-3-parent(top-bottom)[parent]} -------------- */
+/* -------------- {section-3-child(parent) -------------- */
+.section-3-child{
+    width: 32%;
+    height: 460px;
+    background: #ffffff0d;
+    margin: 30px auto;
+    border: 1px solid #5a2d82;
+    border-radius: 16px;
+    box-shadow: 0 0 15px #8a2be2;
+    border: 1px solid #8a2be2;
+    padding: 20px;
+}
+.section-3-child-1,.section-3-child-2{
+    margin-right: 2%;
+}
+/* -------------- section-3-child(parent)} -------------- */
+/* ---------------------------- {section-3-child-parent(3d) ---------------------------- */
+.section-3-child-parent{
+    transform-style: preserve-3d;
+    position: relative;
+    transition-duration: 1s;
+}
+.section-3-child-parent:hover{
+    transform: rotatey(180deg);
+}
+.section-3-child-Before-turning , .section-3-child-After-turning , .section-3-child-parent{
+    width: 100%;
+    height: 320px;
+}
+.section-3-child-Before-turning , .section-3-child-After-turning{
+    position: absolute;
+    border-radius: 16px;
+    box-shadow: 0 0 15px #8a2be2;
+}
+/* -------- {section-3-child-Before-turning(3d) -------- */
+.section-3-child-Before-turning{
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.section-3-child-Before-turning-1{
+    background: url(../images/صوره\ لعملاء\ مطعم\ المرحاض-9.jpg) center /cover;
+}
+.section-3-child-Before-turning-2{
+    background: url(../images/صوره\ لطعام\ المرحاض-5.jpg) center /cover;
+}
+.section-3-child-Before-turning-3{
+    background: url(../images/صوره\ لعملاء\ مطعم\ المرحاض-6.jpg) center /cover;
+}
+.section-3-child-Before-turning-4{
+    background: url(../images/صوره\ لديكور\ مطعم\ المرحاض-19.jpg) center /cover;
+}
+.section-3-child-Before-turning-5{
+    background: url(../images/صوره\ لمشروب\ المرحاض-1.jpg) center /cover;
+}
+.section-3-child-Before-turning-6{
+    background: url(../images/صوره\ لديكور\ مطعم\ المرحاض-7.jpg) center /cover;
+}
+/* -------- section-3-child-Before-turning(3d)} -------- */
+/* -------- {section-3-child-After-turning(3d) -------- */
+.section-3-child-After-turning{
+    transform: rotateY(180deg);
+}
+.section-3-child-After-turning-1{
+    background: url(../images/صوره\ لعملاء\ مطعم\ المرحاض-1.jpg) center /cover;
+}
+.section-3-child-After-turning-2{
+    background: url(../images/صوره\ لطعام\ المرحاض13.jpg) center /cover;
+}
+.section-3-child-After-turning-3{
+    background: url(../images/صوره\ لعملاء\ مطعم\ المرحاض-7.jpg) center /cover;
+}
+.section-3-child-After-turning-4{
+    background: url(../images/صوره\ لديكور\ مطعم\ المرحاض-18.jpg) center /cover;
+}
+.section-3-child-After-turning-5{
+    background: url(../images/صوره\ لمشروب\ المرحاض-6.jpg) center /cover;
+}
+.section-3-child-After-turning-6{
+    background: url(../images/صوره\ لديكور\ مطعم\ المرحاض-5.jpg) center /cover;
+}
+/* -------- {section-3-all-icon[After](3d) -------- */
+.section-3-all-icon{
+    width: 80%;
+    height: 70px;
+    margin: 70px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* -------- {section-3-all-icon(child) -------- */
+.section-3-icon{
+    width: 22%;
+    height: 70px;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 20px;
+    text-shadow: 1px 1px 3px black;
+    background: #ffffff0d;
+    box-shadow: 0 4px 10px #00000066;
+    cursor: pointer;
+}
+.section-3-icon-1 , .section-3-icon-2 , .section-3-icon-3{
+    margin-right: 4%;
+}
+.section-3-icon-1 i{
+    color: #ff9f1c;
+}
+.section-3-icon-2 i{
+    color: #ff006e;
+}
+.section-3-icon-3 i{
+    color: #06d6a0;
+}
+.section-3-icon-4 i{
+    color: #8338ec;
+}
+/* -------- section-3-all-icon(child)} -------- */
+/* -------- section-3-all-icon[After](3d)} -------- */
+/* -------- section-3-child-After-turning(3d)} -------- */
+/* ---------------------------- section-3-child-parent(3d)} ---------------------------- */
+/* ---------------------------- {section-3-child-content ---------------------------- */
+.section-3-child-content{
+    padding: 20px;
+}
+/* -------- {section-3-child-content(icon) -------- */
+.section-3-child-content i{
+    color: #00ffff;
+    transition-duration: 0.3s;
+}
+.section-3-child:hover .section-3-child-content-parent-icon i{
+    color: #ff00ff;
+    transform: scale(1.2);
+}
+.section-3-child-content .section-3-icon-rating{
+    color: #ff00ff;
+    transition-duration: 0.3s;
+}
+.section-3-child:hover .section-3-child-content-parent-icon .section-3-icon-rating{
+    color: #00ffff;
+    transform: scale(1.2);
+}
+/* -------- section-3-child-content(icon)} -------- */
+/* -------- {section-3-child-content(p) -------- */
+.section-3-child-content-p-1{
+    color: #ffffff;
+    text-shadow: 1px 1px 3px #000;
+    margin: 10px 0;
+    font-size: 20px;
+}
+.section-3-child-content-p-2{
+    color: #ffd700;
+    font-size: 18px;
+    text-shadow: 1px 1px 4px #2c003e;
+}
+/* -------- section-3-child-content(p)} -------- */
+/* -------------- section-3-parent-all} -------------- */
+/* ---------------------------- section-3-child-content} ---------------------------- */
+/* -------------------------------------------------------- section-3} -------------------------------------------------------- */
